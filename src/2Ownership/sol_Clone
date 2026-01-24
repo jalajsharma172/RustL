@@ -1,0 +1,22 @@
+fn main() {
+    let s = String::from("Hello");
+
+    print_string(s.clone()); // heap data clone
+    println!("After function call: {}", s);
+}
+
+fn print_string(s1: String) {
+    println!("Inside function: {}", s1);
+}
+
+
+s.clone() → नया heap allocation
+
+Heap में दो "Hello" बन गए
+
+Memory waste हो सकती है (large data में)
+
+Stack             Heap
+-----             -----
+s   ───────────▶ "Hello"
+s1  ───────────▶ "Hello" (clone)

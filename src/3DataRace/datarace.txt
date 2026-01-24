@@ -1,0 +1,20 @@
+3 conditions (तीनों true हों → Data race)
+
+1️⃣ Same memory data
+2️⃣ Multiple access at same time
+3️⃣ At least one write
+
+
+❌ Example: Data race (Rust stops it)   
+fn main() {
+    let mut s = String::from("Hello");
+
+    let r1 = &s;
+    let r2 = &mut s; // ❌ ERROR
+
+    println!("{}", r1);
+}
+
+❌ Read + Write together
+❌ Possible data race
+✅ Compiler hi nhi hoga bro

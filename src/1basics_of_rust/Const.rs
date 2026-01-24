@@ -1,0 +1,10 @@
+
+const GLOBALVARIABLE:u8=5;
+// const GLOBALVARIABLE_WITHOUT_INTIALIZING:u8;
+
+
+
+fn main(){
+    println!("{}",GLOBALVARIABLE);
+    // println!("{}",GLOBALVARIABLE_WITHOUT_INTIALIZING);
+}

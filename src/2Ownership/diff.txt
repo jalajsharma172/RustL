@@ -1,0 +1,9 @@
+
+
+
+
+| Method        | Ownership    | Heap Copy | Modify | Best Use   |
+| ------------- | ------------ | --------- | ------ | ---------- |
+| `clone()`     | New owner    | ✅ Yes     | ❌      | Small data |
+| `&String`     | Single owner | ❌ No      | ❌      | Read-only  |
+| `&mut String` | Single owner | ❌ No      | ✅      | Modify     |
